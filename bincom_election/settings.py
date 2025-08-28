@@ -76,10 +76,10 @@ WSGI_APPLICATION = 'bincom_election.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tochukwu12$default',  # your default database
-        'USER': 'tochukwu12',
-        'PASSWORD': 'Benson1234',
-        'HOST': 'tochukwu12.mysql.pythonanywhere-services.com',
+        'NAME': 'bincom_test',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
