@@ -1,0 +1,38 @@
+<h2>Local Government Results</h2>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <label for="lga">Select LGA:</label>
+    <select name="lga" id="lga">
+        {% for lga in lgas %}
+        {% if selected_lga and lga.lga_id == selected_lga.lga_id %}
+        <option value="{{ lga.lga_id }}" selected>{{ lga.lga_name }}</option>
+        {% else %}
+        <option value="{{ lga.lga_id }}">{{ lga.lga_name }}</option>
+        {% endif %}
+        {% endfor %}
+    </select>
+    <button type="submit">Show Results</button>
+</form>
+
+{% if results %}
+<h3>Results for {{ selected_lga.lga_name }}</h3>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Party</th>
+            <th>Total Votes</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for result in results %}
+        <tr>
+            <td>{{ result.party_abbreviation }}</td>
+            <td>{{ result.total_score }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% elif selected_lga %}
+<p>No results found for this LGA.</p>
+{% endif %}

@@ -1,0 +1,25 @@
+<h2>Add Polling Unit Results</h2>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <label for="polling_unit_name">Polling Unit Name:</label>
+    <input type="text" name="polling_unit_name" required><br><br>
+
+    <label for="ward">Ward:</label>
+    <select name="ward" required>
+        {% for ward in wards %}
+        <option value="{{ ward.ward_id }}">{{ ward.ward_name }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <h3>Enter Party Results:</h3>
+    {% for party in parties %}
+    <label for="{{ party }}">{{ party }}:</label>
+    <input type="number" name="{{ party }}" required><br><br>
+    {% endfor %}
+
+    <label for="entered_by_user">Entered By:</label>
+    <input type="text" name="entered_by_user" value="admin"><br><br>
+
+    <button type="submit">Submit Results</button>
+</form>
