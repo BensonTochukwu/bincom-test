@@ -68,5 +68,5 @@ The application allows users to:
 
 ## Submission Links
 
-    Live Solution: [Insert your hosted app URL here]
-    Source Code: [Insert GitHub repository URL here]
+    Live Solution: [https://tochukwu12.pythonanywhere.com/]
+    Source Code: [https://github.com/BensonTochukwu/bincom-test.git]
