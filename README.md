@@ -65,3 +65,8 @@ The application allows users to:
 ## Author
     TECO-BENSON TOCHUKWU
     Python developer intern Applicant
+
+## Submission Links
+
+    Live Solution: [Insert your hosted app URL here]
+    Source Code: [Insert GitHub repository URL here]
